@@ -1,0 +1,207 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Center content on the page */
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Page title styles */
+.page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Centered form styles */
+.centered-form {
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form group styles */
+.form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.form-group label {
+    flex: 1;
+    text-align: left;
+    margin-right: 10px;
+}
+
+.form-group input {
+    flex: 2;
+    padding: 5px;
+    width: 100%;
+}
+
+/* Submit button styles */
+input[type="submit"] {
+    width: 100%;
+    margin-top: 15px;
+}
+
+
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Center content on the page */
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Page title styles */
+.page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Centered form styles */
+.centered-form {
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Result section styles */
+.result-section {
+    margin-top: 20px;
+}
+
+/* Result title styles */
+.result-title {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* Result tables styles */
+.result-tables {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Individual table styles */
+.result-table {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table caption styles */
+.result-table caption {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Center content on the page */
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Page title styles */
+.page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Centered form styles */
+.centered-form {
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Result section styles */
+.result-section {
+    margin-top: 20px;
+}
+
+/* Result title styles */
+.result-title {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* Result data styles */
+.result-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Individual table styles */
+.result-table {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table caption styles */
+.result-table caption {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}

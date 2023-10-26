@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perhitungan Aktuaria</title>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+<div class="centered-form">
+    <form method="POST" action="/">
+        <h1 style="margin-bottom: 20px;">Perhitungan Aktuaria</h1>
+        <div class="form-group">
+            <label for="k_percent">k (Proporsi gaji untuk manfaat pensiun setelah mencapai usia pensiun) %:</label>
+            <input type="text" name="k_percent" required>
+        </div>
+
+        <div class="form-group">
+            <label for="y">y (Usia saat menjadi peserta di dana pensiun):</label>
+            <input type="text" name="y" required>
+        </div>
+
+        <div class="form-group">
+            <label for="x">x (Usia peserta dana pensiun pada saat ini):</label>
+            <input type="text" name="x" required>
+        </div>
+
+        <div class="form-group">
+            <label for="r">r (Usia batas usia penerima dana pensiun):</label>
+            <input type="text" name = "r" required>
+        </div>
+
+        <div class="form-group mb-4">
+            <label for="sr_minus_1">S<sub>r-1</sub> (Besar gaji selama setahun terakhir) Rp:</label>
+            <input type="text" name="sr_minus_1" required>
+        </div>
+
+        <input type="submit" name="calculate_pvfb" value="Hitung">
+    </form>
+    <h2 style="margin-top: 30px;">Hasil:</h2>
+    <div class="result-section">
+        <div class="result-data">
+            <div class="result-item">
+                <table class="result-table">
+                    <caption>Besar Manfaat Pensiun</caption>
+                    <tbody>
+                        <tr>
+                            <td>{{ br_value }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="result-item">
+                <table class="result-table">
+                    <caption>Nilai Sekarang Manfaat Pensiun (PVFB)</caption>
+                    <tbody>
+                        <tr>
+                            <td>{{ pvfb_value }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h3 style="margin-top: 30px;">Project Unit Credit (PUC)</h3>
+        <div class="result-tables">
+            <table class="result-table">
+                <tbody>
+                    <tr>
+                        <td><b>Masa Kerja (Tahun)</b></td>
+                        <td><b>Iuran Normal</b></td>
+                    </tr>
+                    {% set normal_contributions_items = normal_contributions.items() %}
+                    {% for age, normal_contribution in normal_contributions_items if age != 'Total' %}
+                        <tr>
+                            <td>{{ age }}</td>
+                            <td>{{ normal_contribution|format_as_currency }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <table class="result-table">
+                <tbody>
+                    <tr>
+                        <td><b>Masa Kerja (Tahun)</b></td>
+                        <td><b>Manfaat Aktuaria</b></td>
+                    </tr>
+                    {% set pensiun_benefits_items = pensiun_benefits.items() %}
+                    {% for age, pensiun_benefits in pensiun_benefits_items if age != 'Total' %}
+                        <tr>
+                            <td>{{ age }}</td>
+                            <td>{{ pensiun_benefits|format_as_currency }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>        
+</div>
+</div>
+</body>
+</html>
